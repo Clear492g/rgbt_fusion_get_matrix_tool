@@ -6,6 +6,8 @@ from tkinter import filedialog
 
 import matrix_lib
 
+#初始版本
+
 global x, y, add_flag, pic_type, points_recorder
 add_flag = True
 points_recorder = {'other_img': {}, 'base_img': {}}
