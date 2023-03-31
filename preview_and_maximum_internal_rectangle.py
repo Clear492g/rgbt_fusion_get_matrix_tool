@@ -28,7 +28,7 @@ def predict_base_by_other(coordinates_other, matrix):
     return coordinates_predict
 
 
-def maximum_internal_rectangle(img_mask): # 计算内接矩形
+def maximum_internal_rectangle(img_mask):  # 计算内接矩形
     img = img_mask.copy()
     img_gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
@@ -94,7 +94,6 @@ def maximum_internal_rectangle(img_mask): # 计算内接矩形
         print("No rectangle found")
 
 
-
 if __name__ == '__main__':
 
     matrix = load_transformation_matrix('pic/thermal_matrix.json')
@@ -108,7 +107,6 @@ if __name__ == '__main__':
 
     img_other = Image.open('pic/thermal.png')
     img_base = Image.open('pic/rgb.png')
-
 
     fig = plt.figure()
 
@@ -132,7 +130,6 @@ if __name__ == '__main__':
 
     ax0.set_title('clear')
     ax0.imshow(dst)
-
 
     ax1.set_title('other_pic')
     ax1.imshow(img_other)
